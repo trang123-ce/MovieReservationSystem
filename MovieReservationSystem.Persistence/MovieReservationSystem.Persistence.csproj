@@ -7,12 +7,16 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MovieReservationSystem.Application\MovieReservationSystem.Application.csproj" />
+    <Compile Remove="Context\**" />
+    <Compile Remove="Repositories\**" />
+    <EmbeddedResource Remove="Context\**" />
+    <EmbeddedResource Remove="Repositories\**" />
+    <None Remove="Context\**" />
+    <None Remove="Repositories\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Context\" />
-    <Folder Include="Repositories\" />
+    <ProjectReference Include="..\MovieReservationSystem.Application\MovieReservationSystem.Application.csproj" />
   </ItemGroup>
 
 </Project>
